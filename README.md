@@ -13,13 +13,13 @@ and retries up to five times before giving up.
 
 ## Features
 
-- 🧠 **Natural language → code** — generates a runnable pandas program from a query.
-- 🔁 **Self-repair loop** — on failure, reflects on the error and regenerates (up to 5 attempts).
-- 🧪 **Two-stage validation** — checks the output is a non-empty JSON object, then runs a
+- **Natural language → code** — generates a runnable pandas program from a query.
+- **Self-repair loop** — on failure, reflects on the error and regenerates (up to 5 attempts).
+- **Two-stage validation** — checks the output is a non-empty JSON object, then runs a
   user-supplied validation function to confirm the answer is correct.
-- ⏱️ **Safe execution** — each generated program runs as a subprocess with a 60-second timeout.
-- 📦 **Structured output** — code is returned through a Pydantic schema, not free-form text.
-- 🗺️ **Graph orchestration** — the flow is an explicit 7-node LangGraph `StateGraph`.
+- **Safe execution** — each generated program runs as a subprocess with a 60-second timeout.
+- **Structured output** — code is returned through a Pydantic schema, not free-form text.
+- **Graph orchestration** — the flow is an explicit 7-node LangGraph `StateGraph`.
 
 ## Tech Stack
 
@@ -73,8 +73,6 @@ AZURE_OPENAI_DEPLOYMENT=gpt-4.1-mini
 `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` are required; the version and
 deployment fall back to sensible defaults if omitted.
 
-> ⚠️ **Never commit your `.env`.** It is already listed in `.gitignore` so your real key
-> stays out of version control.
 
 ## Usage
 
