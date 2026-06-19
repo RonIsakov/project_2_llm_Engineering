@@ -150,8 +150,3 @@ GetQueryDetails → GenQueryProgram → ExecuteProgram → Chk4rErr
 5. **ReflectOnErr** — ask the LLM what went wrong.
 6. **ReGenQueryPgm** — regenerate a fixed program using the error + reflection.
 7. **Finalize** — write the program, answer, error, and reflection files.
-
-## Authors
-
-- Noam Kyram
-- Ron Isakov
