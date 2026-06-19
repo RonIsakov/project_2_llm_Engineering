@@ -1,0 +1,29 @@
+A Python program was generated to answer the following query, but it failed. A reflection has been written explaining what went wrong. Use that reflection to regenerate the program so it runs without errors and produces the correct answer.
+
+Original query:
+{query_text}
+
+Data files (names, descriptions, and column structure):
+{data_file_descriptions}
+
+The program that failed:
+```python
+{current_program}
+```
+
+The failure details:
+{last_error}
+
+Reflection on what went wrong (use this to guide your fix):
+{last_reflection}
+
+Now generate a corrected Python program that applies the fix described in the reflection above. Follow these instructions exactly:
+- Read the CSV files using pandas.read_csv or csv.DictReader.
+- The first line of each CSV file contains column headers.
+- When filtering or joining on string columns, strip surrounding whitespace and compare exactly (use str.strip() on values), because CSV cells may contain leading/trailing whitespace that silently breaks equality checks.
+- Compute the answer to the query.
+- Print ONLY a single JSON object to stdout using json.dumps().
+- Do NOT print anything else — no debug output, no "Loading data...", no extra text.
+- Do NOT write to any file. Do NOT call open() in write mode, do not use pandas .to_csv / .to_json, do not touch the filesystem. The only output channel is stdout.
+- Before writing the program, identify the exact field names the query asks for in the output JSON. The output dict must use those exact keys — verbatim, no renames, no additions, no omissions, matching the casing in the query.
+- Round monetary values to 2 decimal places where specified.

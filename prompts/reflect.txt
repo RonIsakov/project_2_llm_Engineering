@@ -1,0 +1,34 @@
+A Python program was generated to answer the following query, but the attempt failed. Reflect on the failure so the program can be corrected on the next attempt.
+
+Original query:
+{query_text}
+
+Data files (names, descriptions, and column structure):
+{data_file_descriptions}
+
+Original instructions that were given to the LLM when generating the program:
+- Read the CSV files using pandas.read_csv or csv.DictReader.
+- The first line of each CSV file contains column headers.
+- When filtering or joining on string columns, strip surrounding whitespace and compare exactly (use str.strip() on values), because CSV cells may contain leading/trailing whitespace that silently breaks equality checks.
+- Compute the answer to the query.
+- Print ONLY a single JSON object to stdout using json.dumps().
+- Do NOT print anything else — no debug output, no "Loading data...", no extra text.
+- Do NOT write to any file. Do NOT call open() in write mode, do not use pandas .to_csv / .to_json, do not touch the filesystem. The only output channel is stdout.
+- Before writing the program, identify the exact field names the query asks for in the output JSON. The output dict must use those exact keys — verbatim, no renames, no additions, no omissions, matching the casing in the query.
+- Round monetary values to 2 decimal places where specified.
+
+The program that was generated:
+```python
+{current_program}
+```
+
+The failure details:
+{last_error}
+
+The failure above is one of these cases:
+- A runtime error (exception, non-zero exit, timeout).
+- A malformed-output error (no stdout, invalid JSON, empty {{}}, or JSON that is not an object).
+- A validation failure: the program ran successfully and produced a JSON object, but the validation function judged the answer to be wrong for this query. In that case the actual incorrect output is included in the failure details above — compare it carefully to what the query asks for.
+- A content-filter error: Azure OpenAI's content filter blocked the previous code-generation call (the failure details begin with `[CONTENT_FILTER]`). In this case there is no faulty program to debug — instead, propose a rephrasing strategy: rewrite the task using strictly neutral, technical CSV/pandas terminology, refer to data only via column names and computations, and avoid any wording from the original query that could resemble sensitive subject matter.
+
+Please reflect step by step on what caused this failure and determine the root cause, so that the program can be fixed. Cover what was wrong (logic bug, wrong column, wrong filter, wrong join key, wrong rounding, wrong output shape, etc.) and what specifically needs to change. Do NOT generate new code — produce only the analysis. Your reflection will be passed verbatim to the regeneration step.

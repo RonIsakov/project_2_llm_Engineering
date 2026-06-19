@@ -1,0 +1,1 @@
+{"FirstName": "Oren", "LastName": "Levi", "City": "Haifa", "TotalSpent": 572.47}
