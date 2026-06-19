@@ -1,12 +1,3 @@
-# Name: Noam Kyram
-# ID: 322568718
-# Email: noam.kyram@post.runi.ac.il
-#
-# Name: Ron Isakov
-# ID: 212195432
-# Email: ron.isakov@post.runi.ac.il
-
-
 import json
 import os
 import importlib.util
